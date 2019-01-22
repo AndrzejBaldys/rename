@@ -31,6 +31,10 @@ parser.add_argument('--all',
                     type=str2bool,
                     help='Rename all files even if they fit the pattern (prefix-digits-suffix). Default is true.',
                     default=True)
+parser.add_argument('--path',
+                    type=str,
+                    help='Path to work directory.',
+                    required=True)
 
 arguments = parser.parse_args()
 
@@ -40,6 +44,7 @@ def main(args):
     msg(args.suffix)
     msg(args.digits)
     msg(args.all)
+    msg(args.path)
 
 
 if __name__ == "__main__":
